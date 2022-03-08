@@ -13,11 +13,11 @@
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/eltonio79/Arduino-Libraries.git"
+    "url": "https://github.com/eltonio79/Platformio-Libraries.git"
   },
   "dependencies":
   [
   ],
   "frameworks": "arduino",
-  "platforms": "atmelavr"
+  "platforms": "atmelavr, atmelsam, espressif32"
 }
