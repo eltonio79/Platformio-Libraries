@@ -1,0 +1,9 @@
+**/Debug
+**/Release
+**/.vs
+**/__vm
+**/*.vcxproj.user
+**/*.vsarduino.h
+**/*.vssscc
+**/nppBackup
+**/temp
