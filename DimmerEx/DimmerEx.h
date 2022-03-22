@@ -16,7 +16,7 @@ public:
     static unsigned long FADE_DURATION_MIN;
     static unsigned long FADE_DURATION_MAX;
 
-    DimmerEx();
+    DimmerEx(byte defaultVal);
     DimmerEx(const DimmerEx& other);
     virtual ~DimmerEx();
     DimmerEx& operator=(const DimmerEx& other);

@@ -2,7 +2,6 @@
 #define DIMMERTLC_H_
 
 #include "DimmerEx.h"
-#include <Globals.h>
 
 class MyMessage;
 
@@ -17,7 +16,7 @@ private:
 #endif
 
 public:
-    DimmerTLC(byte pin = 0);
+    DimmerTLC(byte pin, byte defaultVal);
     DimmerTLC(const DimmerTLC& other);
     virtual ~DimmerTLC();
     DimmerTLC& operator=(const DimmerTLC& other);

@@ -17,10 +17,11 @@ byte DimmerI2C::RAW_VALUE_MAX = 0;    // full ON
 MyMessage* DimmerI2C::MYMESSAGE_ACCESSOR = nullptr;   // reference to global message to controller, used to construct messages "on the fly"
 #endif
 
-DimmerI2C::DimmerI2C(byte slaveI2CAddress /* = 0   */,
-                     byte minimumValue    /* = 128 */,
-                     byte maximumValue    /*= 0    */) :
-    DimmerEx(),
+DimmerI2C::DimmerI2C(byte slaveI2CAddress,
+                     byte minimumValue,
+                     byte maximumValue,
+                     byte defaultVal) :
+    DimmerEx(defaultVal),
     _minimumValue(minimumValue),
     _maximumValue(maximumValue),
     _slaveI2CAddress(slaveI2CAddress)

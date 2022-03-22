@@ -18,8 +18,8 @@ unsigned int DimmerTLC::RAW_VALUE_MAX = 4095; // full ON
 MyMessage* DimmerTLC::MYMESSAGE_ACCESSOR = nullptr;   // reference to global message to controller, used to construct messages "on the fly"
 #endif
 
-DimmerTLC::DimmerTLC(byte pin /*= 0*/):
-    DimmerEx(),
+DimmerTLC::DimmerTLC(byte pin, byte defaultVal):
+    DimmerEx(defaultVal),
     _pin(pin)
 {
 }

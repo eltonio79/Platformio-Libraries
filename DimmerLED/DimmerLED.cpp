@@ -17,18 +17,23 @@ byte DimmerLED::RAW_VALUE_MAX = 255; // full ON
 MyMessage* DimmerLED::MYMESSAGE_ACCESSOR = nullptr;   // reference to global message to controller, used to construct messages "on the fly"
 #endif
 
-DimmerLED::DimmerLED(byte* pins, byte pinsCount, byte minimumValue, byte maximumValue) :
-    DimmerEx(),
+DimmerLED::DimmerLED(byte* pins, byte minimumValue, byte maximumValue, byte defaultVal) :
+    DimmerEx(defaultVal),
     _minimumValue(minimumValue),
     _maximumValue(maximumValue),
     _pins(pins),
-    _pinsCount(pinsCount),
-    _pinsActive(pinsCount)
+    _pinsCount(sizeof(*pins) / sizeof(byte)),
+    _pinsActive(_pinsCount)
 {
 }
 
-DimmerLED::DimmerLED(byte pin) :
-    DimmerLED(new byte(pin))
+DimmerLED::DimmerLED(byte pin, byte defaultVal) :
+    DimmerEx(defaultVal),
+    _minimumValue(RAW_VALUE_MIN),
+    _maximumValue(RAW_VALUE_MAX),
+    _pins(new byte(pin)),
+    _pinsCount(sizeof(*_pins) / sizeof(byte)),
+    _pinsActive(_pinsCount)
 {
 }
 
@@ -56,7 +61,10 @@ DimmerLED& DimmerLED::operator=(const DimmerLED& other)
 
 void DimmerLED::CopyFrom(const DimmerLED& other)
 {
-    _pins = other._pins;
+    if(_pins != nullptr)
+        delete _pins;
+    _pins = new byte(other._pinsCount);
+    memcpy(_pins, other._pins, other._pinsCount);
     _pinsCount = other._pinsCount;
     _pinsActive = other._pinsActive;
     _minimumValue = other._minimumValue;

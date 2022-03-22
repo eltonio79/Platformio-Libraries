@@ -4,8 +4,8 @@
 
 MyMessage* RelayEx::MYMESSAGE_ACCESSOR = nullptr;   // reference to global message to controller, used to construct messages "on the fly"
 
-RelayEx::RelayEx(unsigned long minToggleMillis /* = 0*/) :
-Relay(minToggleMillis),
+RelayEx::RelayEx(unsigned long minToggleMillis, bool defaultVal) :
+Relay(minToggleMillis, defaultVal),
 _mySensorId(0)
 {
 }

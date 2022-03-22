@@ -2,7 +2,6 @@
 #define DIMMERI2C_H_
 
 #include <DimmerEx.h>
-#include <Globals.h>
 
 class MyMessage;
 
@@ -20,7 +19,8 @@ public:
     // #param slaveI2CAddress adres sciemniacza I2C (Attiny85 AC DIMMER MODULE or whatever..)
     // #param minimumValue (0 - 128); dobiera� eksperymentalnie (per �ar�wka / triak)
     // #param maximumValue (0 - 128); dobiera� eksperymentalnie (per �ar�wka / triak)
-    DimmerI2C(byte slaveI2CAddress = 0, byte minimumValue = 128, byte maximumValue = 0);
+    // #param defaultVal; domyślna wartość
+    DimmerI2C(byte slaveI2CAddress, byte minimumValue, byte maximumValue, byte defaultVal);
     DimmerI2C(const DimmerI2C& other);
     virtual ~DimmerI2C();
     DimmerI2C& operator=(const DimmerI2C& other);

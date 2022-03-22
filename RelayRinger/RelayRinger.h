@@ -16,7 +16,7 @@ class RelayRinger : public RelayEx
     unsigned long _intervalDingDong;
 
 public:
-    RelayRinger(PCF8574& expander, byte pinA, byte pinB);
+    RelayRinger(PCF8574& expander, byte pinA, byte pinB, bool defaultVal);
     RelayRinger(const RelayRinger& other);
     RelayRinger& operator=(const RelayRinger& other);
     virtual ~RelayRinger();

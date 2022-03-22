@@ -1,7 +1,7 @@
 #include "Relay.h"
 
-Relay::Relay(unsigned long minToggleMillis /*= 0 */) :
-_isOn(false),
+Relay::Relay(unsigned long minToggleMillis, bool defaultVal) :
+_isOn(defaultVal),
 _isTiming(false),
 _triggerStartMillis(0),
 _triggerDelayMillis(0),

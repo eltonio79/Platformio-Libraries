@@ -15,7 +15,7 @@ class RelayLatch : public RelayEx
     byte _pinB;
 
 public:
-    RelayLatch(PCF8574& expander, byte pinA, byte pinB);
+    RelayLatch(PCF8574& expander, byte pinA, byte pinB, bool defaultVal);
     RelayLatch(const RelayLatch& other);
     RelayLatch& operator=(const RelayLatch& other);
     virtual ~RelayLatch();

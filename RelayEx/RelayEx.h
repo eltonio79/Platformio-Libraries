@@ -3,7 +3,6 @@
 
 #include "Arduino.h"
 #include <Relay.h>
-#include <Globals.h>
 
 class MyMessage;
 
@@ -13,7 +12,7 @@ private:
     static MyMessage* MYMESSAGE_ACCESSOR;   // reference to global message to controller, used to construct messages "on the fly"
 
 public:
-    RelayEx(unsigned long minToggleMillis = 0);
+    RelayEx(unsigned long minToggleMillis, bool defaultVal);
     RelayEx(const RelayEx& other);
     virtual ~RelayEx();
     RelayEx& operator=(const RelayEx& other);

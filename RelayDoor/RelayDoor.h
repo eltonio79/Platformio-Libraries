@@ -15,7 +15,7 @@ class RelayDoor : public RelayEx
     unsigned long _maximumOnTime;
 
 public:
-    RelayDoor(PCF8574& expander, byte pinA, byte pinB);
+    RelayDoor(PCF8574& expander, byte pinA, byte pinB, bool defaultVal);
     RelayDoor(const RelayDoor& other);
     RelayDoor& operator=(const RelayDoor& other);
     virtual ~RelayDoor();

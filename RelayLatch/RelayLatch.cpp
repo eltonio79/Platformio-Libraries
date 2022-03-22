@@ -4,8 +4,8 @@
 // define static class members
 const byte RelayLatch::_switchingOffsetTimeMillis = 15;
 
-RelayLatch::RelayLatch(PCF8574& expander, byte pinA, byte pinB) :
-RelayEx(0), // better to call it instead of implicite call..
+RelayLatch::RelayLatch(PCF8574& expander, byte pinA, byte pinB, bool defaultVal) :
+RelayEx(0, defaultVal), // better to call it instead of implicite call..
 _expander(expander),
 _pinA(pinA),
 _pinB(pinB)

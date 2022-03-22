@@ -6,32 +6,31 @@
 
 #include <Arduino.h>
 #include <DimmerEx.h>
-#include <Globals.h>
 
 class MyMessage;
 
 class DimmerLED : public DimmerEx
 {
 private:
-    static byte RAW_VALUE_MIN;              // minimum RAW value (normally 0)
-    static byte RAW_VALUE_MAX;              // minimum RAW value (normally 255)
-
 #if defined(MYSENSORS_INTEGRATION)
     static MyMessage* MYMESSAGE_ACCESSOR;   // reference to global message to controller, used to construct messages "on the fly"
 #endif
 
 public:
+    static byte RAW_VALUE_MIN; // minimum RAW value (normally 0)
+    static byte RAW_VALUE_MAX; // minimum RAW value (normally 255)
+
     typedef uint8_t(*curveFunction)(uint8_t);
 
     // #param pins
-    // #param pinsCount
     // #param minimumValue (0 - 255); dobiera� eksperymentalnie
     // #param maximumValue (0 - 255); dobiera� eksperymentalnie
+    // #param defaultVal; default value
     DimmerLED(byte* pins,
-              byte pinsCount = 1,
-              byte minimumValue = RAW_VALUE_MIN,
-              byte maximumValue = RAW_VALUE_MAX);
-    DimmerLED(byte pin);
+              byte minimumValue,
+              byte maximumValue,
+              byte defaultVal);
+    DimmerLED(byte pin, byte defaultVal);
     DimmerLED(const DimmerLED& other);
     virtual ~DimmerLED();
     DimmerLED& operator=(const DimmerLED& other);

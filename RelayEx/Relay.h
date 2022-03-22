@@ -18,7 +18,7 @@ private:
     unsigned long _minToggleMillis;
 
 public:
-    Relay(unsigned long minToggleMillis = 0);
+    Relay(unsigned long minToggleMillis, bool defaultVal);
     Relay(const Relay& other);
     virtual ~Relay();
     Relay& operator=(const Relay& other);

@@ -1,7 +1,7 @@
 #include "RelayPin.h"
 
-RelayPin::RelayPin(byte pin, unsigned long minToggleMillis /* = 0*/) :
-RelayEx(minToggleMillis),
+RelayPin::RelayPin(byte pin, unsigned long minToggleMillis, bool defaultVal) :
+RelayEx(minToggleMillis, defaultVal),
 _pin(pin)
 {
 }

@@ -10,8 +10,8 @@ unsigned long DimmerEx::FADE_DURATION_OFF = 0;
 unsigned long DimmerEx::FADE_DURATION_MIN = 15;        // ma wp�yw na p�ynno�� �ciemniania (15 = 66.6 klatek na sekund�)
 unsigned long DimmerEx::FADE_DURATION_MAX = 86400000;  // 1 day (for sanity checks)
 
-DimmerEx::DimmerEx() :
-    _value(DimmerEx::VALUE_MIN),
+DimmerEx::DimmerEx(byte defaultVal) :
+    _value(defaultVal),
     _lastValue(DimmerEx::VALUE_MAX / 2), // last value has to be from 1 to 99 %
     _fadeFromValue(_value),
     _fadeToValue(_value),
