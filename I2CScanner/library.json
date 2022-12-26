@@ -1,0 +1,23 @@
+{
+  "name": "I2CScanner",
+  "version": "1.0.0",
+  "keywords": "Eltonio, I2CScanner, I2C",
+  "description": "I2C scanner utility.",
+  "export": {
+    "include":
+    [
+      "I2CScanner/*.[ch]",
+      "I2CScanner/*.[ch]pp"
+    ]
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/eltonio79/Platformio-Libraries.git"
+  },
+  "dependencies":
+  [
+  ],
+  "frameworks": "arduino",
+  "platforms": "atmelavr, atmelsam, espressif32"
+}

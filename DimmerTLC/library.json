@@ -1,0 +1,43 @@
+{
+  "name": "DimmerTLC",
+  "version": "1.0.0",
+  "keywords": "Eltonio, Dimmer, TLC, MySensors, eltonio, dimmer, tlc, mysensors",
+  "description": "TLC dimmer with MySensors integration.",
+  "export": {
+    "include":
+    [
+      "DimmerTLC/*.[ch]",
+      "DimmerTLC/*.[ch]pp"
+    ]
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/eltonio79/Platformio-Libraries.git"
+  },
+  "dependencies":
+  [
+    {
+      "name": "DimmerEx",
+      "frameworks": "arduino",
+      "authors":
+      [
+        "Marcin Brodowski"
+      ]
+    },
+    {
+      "name": "TLC5940",
+      "frameworks": "arduino",
+      "authors":
+      [
+        "Paul Stoffregen"
+      ]
+    },
+    {
+      "name": "MySensors",
+      "frameworks": "arduino"
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": "atmelavr, atmelsam, espressif32"
+}

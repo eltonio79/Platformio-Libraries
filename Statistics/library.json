@@ -1,0 +1,23 @@
+{
+  "name": "Statistics",
+  "version": "1.0.0",
+  "keywords": "Eltonio, Statistics",
+  "description": "Statistics stuff.",
+  "export": {
+    "include":
+    [
+      "Statistics/*.[ch]",
+      "Statistics/*.[ch]pp"
+    ]
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/eltonio79/Platformio-Libraries.git"
+  },
+  "dependencies":
+  [
+  ],
+  "frameworks": "arduino",
+  "platforms": "atmelavr, atmelsam, espressif32"
+}

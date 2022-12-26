@@ -1,0 +1,23 @@
+{
+  "name": "Beeper",
+  "version": "1.0.0",
+  "keywords": "Eltonio, Beeper, PWM, eltonio, beeper, pwm",
+  "description": "Asynchronous PWM beeper.",
+  "export": {
+    "include":
+    [
+      "Beeper/*.[ch]",
+      "Beeper/*.[ch]pp"
+    ]
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/eltonio79/Arduino-Libraries.git"
+  },
+  "dependencies":
+  [
+  ],
+  "frameworks": "arduino",
+  "platforms": "atmelavr"
+}

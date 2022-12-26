@@ -1,0 +1,35 @@
+{
+  "name": "DimmerLED",
+  "version": "1.0.0",
+  "keywords": "Eltonio, Dimmer, LED, PWM, MySensors, eltonio, dimmer, led, pwm, mysensors",
+  "description": "LED dimmer with MySensors integration.",
+  "export": {
+    "include":
+    [
+      "DimmerLED/*.[ch]",
+      "DimmerLED/*.[ch]pp"
+    ]
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/eltonio79/Platformio-Libraries.git"
+  },
+  "dependencies":
+  [
+    {
+      "name": "DimmerEx",
+      "frameworks": "arduino",
+      "authors":
+      [
+        "Marcin Brodowski"
+      ]
+    },
+    {
+      "name": "MySensors",
+      "frameworks": "arduino"
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": "atmelavr, atmelsam, espressif32"
+}

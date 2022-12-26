@@ -1,0 +1,27 @@
+{
+  "name": "BeeperEx",
+  "version": "1.0.0",
+  "keywords": "Eltonio, Beeper, NewTone, Tone, eltonio, beeper, newtone, tone",
+  "description": "Asynchronous beeper powered by NewTone library.",
+  "export": {
+    "include":
+    [
+      "BeeperEx/*.[ch]",
+      "BeeperEx/*.[ch]pp"
+    ]
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/eltonio79/Arduino-Libraries.git"
+  },
+  "dependencies":
+  [
+    {
+      "name": "NewTone",
+      "frameworks": "arduino"
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": "atmelavr"
+}

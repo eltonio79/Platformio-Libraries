@@ -1,0 +1,39 @@
+{
+  "name": "DimmerI2C",
+  "version": "1.0.0",
+  "keywords": "Eltonio, Dimmer, I2C, TWI, MySensors, eltonio, dimmer, i2c, twi, mysensors",
+  "description": "I2C / TWI dimmer with MySensors integration.",
+  "export": {
+    "include":
+    [
+      "DimmerI2C/*.[ch]",
+      "DimmerI2C/*.[ch]pp"
+    ]
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/eltonio79/Platformio-Libraries.git"
+  },
+  "dependencies":
+  [
+    {
+      "name": "DimmerEx",
+      "frameworks": "arduino",
+      "authors":
+      [
+        "Marcin Brodowski"
+      ]
+    },
+    {
+      "name": "Wire",
+      "frameworks": "arduino"
+    },
+    {
+      "name": "MySensors",
+      "frameworks": "arduino"
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": "atmelavr, atmelsam, espressif32"
+}

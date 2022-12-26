@@ -1,0 +1,23 @@
+{
+  "name": "RozdzielniaCommonFiles",
+  "version": "1.0.0",
+  "keywords": "Eltonio, MySensors, eltonio, mysensors",
+  "description": "Global defines for sketches / libraries. Used to unify gateway's code.",
+  "export": {
+    "include":
+    [
+      "RozdzielniaCommonFiles/*.[ch]",
+      "RozdzielniaCommonFiles/*.[ch]pp"
+    ]
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/eltonio79/Platformio-Libraries.git"
+  },
+  "dependencies":
+  [
+  ],
+  "frameworks": "arduino",
+  "platforms": ["atmelavr", "atmelsam", "espressif8266", "espressif32"]
+}

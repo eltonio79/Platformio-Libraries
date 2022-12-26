@@ -1,0 +1,35 @@
+{
+  "name": "RelayDoor",
+  "version": "1.0.0",
+  "keywords": "Eltonio, Relay, PCF8574, MySensors, eltonio, relay, pcf8574, mysensors",
+  "description": "Door relay based on PCF8574 expander with MySensors integration.",
+  "export": {
+    "include":
+    [
+      "RelayDoor/*.[ch]",
+      "RelayDoor/*.[ch]pp"
+    ]
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/eltonio79/Platformio-Libraries.git"
+  },
+  "dependencies":
+  [
+    {
+      "name": "RelayEx",
+      "frameworks": "arduino",
+      "authors":
+      [
+        "Marcin Brodowski"
+      ]
+    },
+    {
+      "name": "PCF8574",
+      "frameworks": "arduino"
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": "atmelavr, atmelsam, espressif32"
+}

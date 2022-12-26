@@ -1,0 +1,31 @@
+{
+  "name": "RelayPin",
+  "version": "1.0.0",
+  "keywords": "Eltonio, Relay, MySensors, eltonio, relay, mysensors",
+  "description": "Pin relay with MySensors integration.",
+  "export": {
+    "include":
+    [
+      "RelayPin/*.[ch]",
+      "RelayPin/*.[ch]pp"
+    ]
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/eltonio79/Platformio-Libraries.git"
+  },
+  "dependencies":
+  [
+    {
+      "name": "RelayEx",
+      "frameworks": "arduino",
+      "authors":
+      [
+        "Marcin Brodowski"
+      ]
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": "atmelavr, atmelsam, espressif32"
+}
