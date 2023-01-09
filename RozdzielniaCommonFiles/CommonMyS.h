@@ -16,20 +16,20 @@
 
 ///////////////////////////////// MQTT CONFIGURATION //////////////////////////////////
 
-// Set client id and version 
+// Set client id and version
 #define MY_MQTT_CLIENT_ID MY_HOSTNAME
 #define MY_MQTT_CLIENT_VERSION "2.3.2"
 
 #define MY_CONTROLLER_IP_ADDRESS 192, 168, 1, 7 // use controller IP address
-#ifndef MY_CONTROLLER_IP_ADDRESS 
+#ifndef MY_CONTROLLER_IP_ADDRESS
 #define MY_CONTROLLER_URL_ADDRESS "homeassistant.dom.lan" // use controller URL
 #endif
 #define MY_PORT 1883
 
-#define MY_MQTT_USER     "_USERNAME_MQTT_"
-#define MY_MQTT_PASSWORD "_PASSWORD_MQTT_"
+#define MY_MQTT_USER     _USERNAME_HA_
+#define MY_MQTT_PASSWORD _PASSWORD_HA_
 
-#define MY_ROZDZIELNIA_PREFIX "Rozdzielnia" 
+#define MY_ROZDZIELNIA_PREFIX "Rozdzielnia"
 #define MY_HOSTNAME MY_ROZDZIELNIA_PREFIX " " MY_ROZDZIELNIA_NAME
 #define MY_MAC_ADDRESS 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, MY_ROZDZIELNIA_ID
 #define MY_MQTT_TOPIC_PREFIX MY_ROZDZIELNIA_PREFIX "/"
