@@ -2,7 +2,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 
-void ScannerI2C()
+void I2CScanner()
 {
     Serial.println();
     Serial.println("I2C scanner. Scanning ...");
@@ -12,7 +12,7 @@ void ScannerI2C()
     for (byte i = 8; i < 120; i++)
     {
         Wire.beginTransmission(i);          // Begin I2C transmission Address (i)
-        if (Wire.endTransmission() == 0)  // Receive 0 = success (ACK response) 
+        if (Wire.endTransmission() == 0)  // Receive 0 = success (ACK response)
         {
             Serial.print("Found address: ");
             Serial.print(i, DEC);
